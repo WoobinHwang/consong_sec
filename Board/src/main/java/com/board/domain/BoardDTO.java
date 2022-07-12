@@ -129,6 +129,9 @@ public class BoardDTO {
 	public void setDeleteTime(LocalDateTime deleteTime) {
 		this.deleteTime = deleteTime;
 	}
+	
+	
+	
 
 	@Override
 	public String toString() {
