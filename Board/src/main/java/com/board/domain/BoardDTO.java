@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BoardDTO {
+public class BoardDTO extends CommonDTO {
 
 	/** 번호 (PK) */
 	private Long idx;
@@ -29,18 +29,7 @@ public class BoardDTO {
 
 	/** 비밀 여부 */
 	private String secretYn;
-
-	/** 삭제 여부 */
-	private String deleteYn;
-
-	/** 등록일 */
-	private LocalDateTime insertTime;
-
-	/** 수정일 */
-	private LocalDateTime updateTime;
-
-	/** 삭제일 */
-	private LocalDateTime deleteTime;
+	
 
 	public Long getIdx() {
 		return idx;
@@ -98,51 +87,16 @@ public class BoardDTO {
 		this.secretYn = secretYn;
 	}
 
-	public String getDeleteYn() {
-		return deleteYn;
-	}
-
-	public void setDeleteYn(String deleteYn) {
-		this.deleteYn = deleteYn;
-	}
-
-	public LocalDateTime getInsertTime() {
-		return insertTime;
-	}
-
-	public void setInsertTime(LocalDateTime insertTime) {
-		this.insertTime = insertTime;
-	}
-
-	public LocalDateTime getUpdateTime() {
-		return updateTime;
-	}
-
-	public void setUpdateTime(LocalDateTime updateTime) {
-		this.updateTime = updateTime;
-	}
-
-	public LocalDateTime getDeleteTime() {
-		return deleteTime;
-	}
-
-	public void setDeleteTime(LocalDateTime deleteTime) {
-		this.deleteTime = deleteTime;
-	}
-	
-	
-	
-
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("BoardDTO [idx=").append(idx).append(", title=").append(title).append(", content=")
 				.append(content).append(", writer=").append(writer).append(", viewCnt=").append(viewCnt)
-				.append(", noticeYn=").append(noticeYn).append(", secretYn=").append(secretYn).append(", deleteYn=")
-				.append(deleteYn).append(", insertTime=").append(insertTime).append(", updateTime=").append(updateTime)
-				.append(", deleteTime=").append(deleteTime).append("]");
+				.append(", noticeYn=").append(noticeYn).append(", secretYn=").append(secretYn).append("]");
 		return builder.toString();
 	}
+
+	
 
 	
 }
